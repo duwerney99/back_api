@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<p th:text="'Dispositivos, ' + ${name} + '!'"/>
+
+<table>
+    <th:block th:each="dispo : ${dispositivo}">
+        <tr>
+            <td th:text="${dispo.dipositivo_id}"></td>
+            <td th:text="${dispo.mac}"></td>
+            <td th:text="${dispo.tipo}"></td>
+            <td th:text="${dispo.conexion_red}"></td>
+            <td th:text="${dispo.conexion_actual}"></td>
+            <td th:text="${dispo.ip}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
